@@ -102,3 +102,6 @@ def perform_oauth(email, master_token, android_id, service, app, client_sig,
     }
 
     return _perform_auth_request(data)
+
+def generate_signature(email, password):
+    return google.signature(email, password, android_key_7_3_29)
